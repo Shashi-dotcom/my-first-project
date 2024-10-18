@@ -8,7 +8,7 @@ const UpdateUsers=()=>{
     const [age , setAge] = useState();
     const navigate=useNavigate();
     useEffect(()=>{
-        axios.get('https://my-first-project-1-0wve.onrender.com/'+id)
+        axios.get('https://my-first-project-1-0wve.onrender.com/getUser/'+id)
         .then(result => {console.log(result)
          setName(result.data.name)
          setEmail(result.data.email)
