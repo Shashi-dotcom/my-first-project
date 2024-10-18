@@ -1,15 +1,15 @@
 import axios from 'axios';
-import React,{useEffect, useState} from 'react';
+import React{useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 const Users=()=>{
     const [users , setUsers]=useState([])
     useEffect(()=>{
-       axios.get('http://localhost:3001')
+       axios.get('https://my-first-project-1-0wve.onrender.com')
        .then((result)=>setUsers(result.data))
        .catch(error => console.log(error))
     },[])
     const handledelete = (id) => {
-       axios.delete('http://localhost:3001/deleteUser/'+id)
+       axios.delete('https://my-first-project-1-0wve.onrender.com/deleteUser/'+id)
        .then(result => {
         console.log(result)
         window.location.reload()
